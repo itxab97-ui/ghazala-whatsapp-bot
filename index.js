@@ -161,9 +161,14 @@ async function notifyAgent(studentNumber, data) {
 async function showMainMenu(to) {
   resetSession(to);
   await sendButtons(to,
-    `👋 *Welcome to Ghazala Institute!*\n\n🌍 Language Courses | ✈️ Study Abroad\n\nChoose an option:`,
-    ["📚 Courses & Fees", "✈️ Study Abroad", "🤝 Talk to Agent"]
+    `👋 *Welcome to Ghazala Institute!*
+
+🌍 Language Courses | ✈️ Study Abroad Consultancy
+
+Please choose an option:`,
+    ["📚 Courses & Fees", "✈️ Study Abroad", "📍 Location & Info"]
   );
+  await sendButtons(to, "More options:", ["🎓 Admission Info", "🤝 Talk to Agent", "📋 Register Now"]);
 }
 
 async function showCoursesMenu(to) {
